@@ -1,0 +1,8 @@
+config/.wget-hsts
+config/machine-id
+config/.local/
+config/.wine/
+config/log/*
+config/xdg
+config_old
+build/rootfs/Silverlight.exe
