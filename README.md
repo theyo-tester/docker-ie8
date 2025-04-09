@@ -42,6 +42,8 @@ If you need to manage or monitor a Web Service application based on Silverlight,
 - Remove unneeded features (f.i. winetricks packages that I added in the process of making this image work as expected)
 - Move some installation steps into the building phase.
 - A lot of bug fixes needed.
+- Test the stability
+- Update IE8 to the latest official Version (2017)
 
   
 ## Disclaimer
