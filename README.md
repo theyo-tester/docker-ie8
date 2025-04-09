@@ -8,7 +8,7 @@ If you need to manage or monitor a Web Service application based on Silverlight,
 
 ## General
 
-- **Base Image:** Taken from jlesage/docker-baseimage-gui
+- **Base Image:** Taken from [jlesage/docker-baseimage-gui](https://github.com/jlesage/docker-baseimage-gui)
 - **Dependencies:** This bundle heavily relies on `winehq` and `winetricks` to achieve the desired result.
 - **Note:** Please see this project as a Proof of Concept (PoC). It has a lot of potential for improvement and bug fixing.
 
@@ -20,6 +20,7 @@ If you need to manage or monitor a Web Service application based on Silverlight,
 
 2. **Configuration:**
    - Adapt the `compose.yml` file: For example, change the volume folders and network settings according to your needs.
+   - Check also the docu from the [docker-baseimage-gui](https://github.com/jlesage/docker-baseimage-gui) repo. All options available there should also apply here.
 
 3. **Build the Image:**
    - Run `docker compose build`. Make sure it finishes completely.
@@ -29,21 +30,23 @@ If you need to manage or monitor a Web Service application based on Silverlight,
    - The GUI can be accessed through a VNC viewer (Port 5900) or through the browser (Port 5800 if you did not change it).
 
 5. **Installation:**
-   - Follow all installation steps shown in the UI. Sometimes it takes longer for a pop-up to appear, just wait, it will eventually pop up.
+   - Follow all installation steps shown in the UI. Sometimes it takes longer for a pop-up to appear, just wait, it will eventually pop up. To make sure that you are not stuck, see if newer entries appear in the console.
+   - If you don't see any new line printed for multiple minutes, cancel (CTRL-C) and start the container again, or start from scratch (see point 7).
      
 6. **Use:**
    - Every time you start the container, you will first see the installer. Close it and IE8 will start.
      
 7. **Troubleshoot:**
    - If your container fails to start IE8, you can start from scratch with a fresh wine environment by deleting the .wine folder inside the config/ folder.
+   - I is not be enough to remove only the container and start with a new one, because the new wine instance will start with the previous .wine folder.
      
 ## ToDo
-
 - Remove unneeded features (f.i. winetricks packages that I added in the process of making this image work as expected)
 - Move some installation steps into the building phase.
 - A lot of bug fixes needed.
 - Test the stability
 - Update IE8 to the latest official Version (2017)
+- Avoid logging into a file to infnite.
 
   
 ## Disclaimer
