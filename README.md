@@ -1,4 +1,4 @@
-# docker-ie8 with Silverlight
+# docker - IE8 with Silverlight
 <b> Run Internet Explorer 8 (with Silverlight support) Inside a Docker Container and Access It Over Your Modern Browser</b>
 ___
 
